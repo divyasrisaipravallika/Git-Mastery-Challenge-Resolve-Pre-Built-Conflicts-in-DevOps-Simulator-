@@ -48,3 +48,39 @@ development:
     cors_enabled: true
   notifications:
     email_alerts: false
+
+# Experimental features from conflict-simulator (NOT production ready)
+experimental:
+  enabled: false
+  version: "3.0.0-experimental"
+  environment: testing
+  notes: "Experimental AI and multi-cloud capabilities"
+
+  server:
+    multi_port: [9000, 9001, 9002]
+
+  logging:
+    ai_analysis: enabled
+
+  database:
+    distributed: true
+
+  features:
+    chaos_engineering: enabled
+
+  ai_features:
+    predictive_scaling: true
+    anomaly_detection: true
+    auto_optimization: true
+    model_version: "v2.1.0"
+
+  cloud_providers:
+    - aws
+    - azure
+    - gcp
+    - digitalocean
+
+  security:
+    zero_trust: enabled
+    encryption: AES-256
+    audit_logging: comprehensive
