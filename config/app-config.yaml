@@ -1,4 +1,5 @@
-# Production Application Configuration
+# Unified Application Configuration
+
 application:
   name: DevOpsSimulator
   version: 1.0.0
@@ -23,3 +24,27 @@ features:
   auto_scaling: true
   load_balancer: enabled
   backup_enabled: true
+
+# Development configuration (disabled by default)
+development:
+  enabled: false
+  server:
+    host: localhost
+    port: 3000
+    hot_reload: false
+  logging:
+    level: DEBUG
+    format: pretty
+    show_stack_trace: true
+  database:
+    host: localhost
+    port: 5432
+    name: devops_dev
+  features:
+    experimental_features: true
+  tools:
+    mock_external_apis: true
+    debug_mode: true
+    cors_enabled: true
+  notifications:
+    email_alerts: false
